@@ -3,39 +3,285 @@
 <!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang=""><![endif]-->
 <!--[if IE 8]><html class="no-js lt-ie9" lang=""> <![endif]-->
 <!--[if gt IE 8]><!--><html class="no-js" lang=""><!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Front - Basic coding</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-        <!-- START: Vendor CSS -->
-        <link rel="stylesheet" href="css/uikit.min.css" />
-        <!-- END: Vendor CSS -->
-    </head>
-    <body>
-        <!-- START: Old Browser Warning -->
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <!-- END: Old Browser Warning -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Front - Basic coding</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png"> <!-- TODO Add new Image and upload! -->
+    <!-- START: Vendor CSS -->
+    <link rel="stylesheet" href="css/uikit.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.12/js/all.js" integrity="sha384-Voup2lBiiyZYkRto2XWqbzxHXwzcm4A5RfdfG6466bu5LqjwwrjXCMBQBLMWh7qR" crossorigin="anonymous"></script>
+    <!-- END: Vendor CSS -->
+    <!-- START: Theme CSS -->
+    <style>
+        /*******************************************/
+        /*************** - General - ***************/
+        /*******************************************/
+        html {
+            color: #fff;
+            font: 400 16px/20px 'Abel', sans-serif;
+        }
+        body {
+            background: url("img/bg.jpg") no-repeat center center fixed; /* TODO Remove Image */
+            background-color: #181818;
+            background-size: cover;
+            min-height: 100vh;
+        }
+        a:link, a:visited {
+            color: #78684e;
+            text-decoration: none;
+            transition: all 0.5s ease;
+        }
+            a:hover, a:active {
+            color: #ffffff;
+        }
+        /*******************************************/
+        /***************** - Main - ****************/
+        /*******************************************/
+        .us-main {
+            background: #0f0f0f;
+            box-shadow: 0 0 62px 10px #000;
+            margin: 100px 0;
+        }
+        /*******************************************/
+        /***************** - Main - ****************/
+        /*******************************************/
+        .us-category--item {
+            padding-top: 100%;
+            position: relative;
+            width: 100%;
+        }
+        .us-category--item__inner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+        .us-category--slider__controls {
+            background: rgba(255, 255, 255, 0.1);
+            height: 50px;
+        }
 
-        <div>123</div>
+        .us-category--slider__button:link,
+        .us-category--slider__button:visited {
+            height: 50px;
+            width: 50px;
+            display: inline-block;
+            text-align: center;
+            line-height: 50px;
+            background: rgba(255, 255, 255, 0.3);
+            color: #fff;
+        }
+        .us-category--slider__button:hover,
+        .us-category--slider__button:active {
+            background: rgba(255, 255, 255, 0.8);
+        }
+        .us-category--slider__button-push {
+            margin-right: 50px;
+        }
+        .us-category--overlay {
+            height: 350px;
+            z-index:10;
+            background: #131313;
+        }
+        /*******************************************/
+        /************** - UIkit Reset - ************/
+        /*******************************************/
+        .uk-container {
+            max-width: 1400px;
+        }
+    </style>
+    <!-- END: Theme CSS -->
+</head>
+<body>
+    <!-- START: Old Browser Warning -->
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <!-- END: Old Browser Warning -->
+    <!-- START: IndexPage Main Content -->
+    <div class="uk-container">
+        <div class="uk-grid-collapse" uk-grid>
+            <div class="uk-width-1-1 us-main">
+                
+                <br><br>
+                <!-- START: Category #1 -->
+                <div class="uk-grid-collapse" uk-grid>
 
-        <!-- START: Vendor JavaScript -->
-        <script src="js/uikit.min.js"></script>
-        <script src="js/uikit-icons.min.js"></script>
-        <!-- END: Vendor JavaScript -->
-        <!-- START: Google Analytics -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-        </script>
-        <!-- END: Google Analytics -->
-    </body>
+                        <div class="uk-width-1-2">
+
+                            <div class="uk-position-relative itemclass" hidden>
+                                <div class="uk-position-cover us-category--overlay">Test<br>Test<br>Test</div>
+                            </div>
+
+                            <div class="uk-position-relative" uk-slideshow="min-height: 300; max-height: 350; animation: fade">
+                                <ul class="uk-slideshow-items">
+                                    <li>
+                                        <img src="img/slideritem1.jpg" alt="" uk-cover>
+                                        <div class="uk-position-top-right">
+                                            <a uk-tooltip="title: Tagged with; pos: left" class="us-category--slider__button uk-margin-small-top uk-margin-small-right" href="#"><i class="fas fa-tags"></i></a>
+                                        </div>
+                                        <div class="uk-position-bottom us-category--slider__controls">
+                                            <a uk-toggle="target: .itemclass; animation: uk-animation-fade" uk-tooltip="title: Image details; pos: right" class="us-category--slider__button" href="javascript:void(0)"><i class="fas fa-plus"></i></a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <img src="img/slideritem2.jpg" alt="" uk-cover>
+                                        <div class="uk-position-top-right">
+                                            <a uk-tooltip="title: Tagged with; pos: left" class="us-category--slider__button uk-margin-small-top uk-margin-small-right" href="#"><i class="fas fa-tags"></i></a>
+                                        </div>
+                                        <div class="uk-position-bottom us-category--slider__controls">
+                                            <a uk-tooltip="title: Image details; pos: right" class="us-category--slider__button" href="#"><i class="fas fa-plus"></i></a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <img src="img/slideritem3.jpg" alt="" uk-cover>
+                                        <div class="uk-position-top-right">
+                                            <a uk-tooltip="title: Tagged with; pos: left" class="us-category--slider__button uk-margin-small-top uk-margin-small-right" href="#"><i class="fas fa-tags"></i></a>
+                                        </div>
+                                        <div class="uk-position-bottom us-category--slider__controls">
+                                            <a uk-tooltip="title: Image details; pos: right" class="us-category--slider__button" href="#"><i class="fas fa-plus"></i></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <a uk-tooltip="title: Previous image; pos: left" class="uk-position-bottom-right us-category--slider__button us-category--slider__button-push" href="#" uk-slideshow-item="previous"><i class="fas fa-angle-left"></i></a>
+                                <a uk-tooltip="title: Next image; pos: right" class="uk-position-bottom-right us-category--slider__button" href="#" uk-slideshow-item="next"><i class="fas fa-angle-right"></i></a>
+                            </div>
+                    </div>
+                    <!-- START: Category Item List -->
+                    <div class="uk-width-1-2">
+                        <div class="uk-grid-collapse" uk-grid>
+                            <div class="uk-width-1-4">
+                                <div class="us-category--item">
+                                    <div class="us-category--item__inner uk-cover-container uk-transition-toggle">
+                                        <img src="img/griditem1.jpg" uk-cover>
+                                        <a href="#">
+                                            <div class="uk-overlay-primary uk-position-cover uk-transition-fade"></div>
+                                            <div class="uk-position-center">
+                                                <span class="uk-transition-fade"><i class="fas fa-plus"></i></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="us-category--item">
+                                    <div class="us-category--item__inner uk-cover-container uk-transition-toggle">
+                                        <img src="img/griditem2.jpg" uk-cover>
+                                        <a href="#">
+                                            <div class="uk-overlay-primary uk-position-cover uk-transition-fade"></div>
+                                            <div class="uk-position-center">
+                                                <span class="uk-transition-fade"><i class="fas fa-plus"></i></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="us-category--item">
+                                    <div class="us-category--item__inner uk-cover-container uk-transition-toggle">
+                                        <img src="img/griditem3.jpg" uk-cover>
+                                        <a href="#">
+                                            <div class="uk-overlay-primary uk-position-cover uk-transition-fade"></div>
+                                            <div class="uk-position-center">
+                                                <span class="uk-transition-fade"><i class="fas fa-plus"></i></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="us-category--item">
+                                    <div class="us-category--item__inner uk-cover-container uk-transition-toggle">
+                                        <img src="img/griditem4.jpg" uk-cover>
+                                        <a href="#">
+                                            <div class="uk-overlay-primary uk-position-cover uk-transition-fade"></div>
+                                            <div class="uk-position-center">
+                                                <span class="uk-transition-fade"><i class="fas fa-plus"></i></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="us-category--item">
+                                    <div class="us-category--item__inner uk-cover-container uk-transition-toggle">
+                                        <img src="img/griditem5.jpg" uk-cover>
+                                        <a href="#">
+                                            <div class="uk-overlay-primary uk-position-cover uk-transition-fade"></div>
+                                            <div class="uk-position-center">
+                                                <span class="uk-transition-fade"><i class="fas fa-plus"></i></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="us-category--item">
+                                    <div class="us-category--item__inner uk-cover-container uk-transition-toggle">
+                                        <img src="img/griditem6.jpg" uk-cover>
+                                        <a href="#">
+                                            <div class="uk-overlay-primary uk-position-cover uk-transition-fade"></div>
+                                            <div class="uk-position-center">
+                                                <span class="uk-transition-fade"><i class="fas fa-plus"></i></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="us-category--item">
+                                    <div class="us-category--item__inner uk-cover-container uk-transition-toggle">
+                                        <img src="img/griditem7.jpg" uk-cover>
+                                        <a href="#">
+                                            <div class="uk-overlay-primary uk-position-cover uk-transition-fade"></div>
+                                            <div class="uk-position-center">
+                                                <span class="uk-transition-fade"><i class="fas fa-plus"></i></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="us-category--item">
+                                    <div class="us-category--item__inner uk-cover-container uk-transition-toggle">
+                                        <img src="img/griditem8.jpg" uk-cover>
+                                        <a href="#">
+                                            <div class="uk-overlay-primary uk-position-cover uk-transition-fade"></div>
+                                            <div class="uk-position-center">
+                                                <span class="uk-transition-fade"><i class="fas fa-plus"></i></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END: Category Item List -->
+                </div>
+                <!-- END: Category #1 -->
+                <br><br>
+
+            </div>
+        </div>
+    </div>
+    <!-- END: IndexPage Main Content -->
+    <!-- START: Vendor JavaScript -->
+    <script src="js/uikit.min.js"></script>
+    <!-- END: Vendor JavaScript -->
+    <!-- START: Google Analytics -->
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+    </script>
+    <!-- END: Google Analytics -->
+</body>
 </html>
