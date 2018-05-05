@@ -12,6 +12,7 @@
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png"> <!-- TODO Add new Image and upload! -->
     <!-- START: Vendor CSS -->
     <link rel="stylesheet" href="css/uikit.min.css" />
+    <link rel="stylesheet" href="css/instagram.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
     <script defer src="https://use.fontawesome.com/releases/v5.0.12/js/all.js" integrity="sha384-Voup2lBiiyZYkRto2XWqbzxHXwzcm4A5RfdfG6466bu5LqjwwrjXCMBQBLMWh7qR" crossorigin="anonymous"></script>
     <!-- END: Vendor CSS -->
@@ -49,6 +50,17 @@
         /*******************************************/
         /***************** - Main - ****************/
         /*******************************************/
+        .us-category--title {
+
+        }
+        .us-category--title__menu {
+            margin-top: 0px;
+            /* height: 260px; */
+        }
+        .us-category--description {
+            height: 160px;
+            overflow-y: scroll;
+        }
         .us-category--item {
             padding-top: 100%;
             position: relative;
@@ -84,9 +96,9 @@
             margin-right: 50px;
         }
         .us-category--overlay {
-            height: 350px;
             z-index:10;
             background: #131313;
+            padding: 20px;
         }
         /*******************************************/
         /************** - UIkit Reset - ************/
@@ -105,59 +117,90 @@
     <!-- END: Old Browser Warning -->
     <!-- START: IndexPage Main Content -->
     <div class="uk-container">
-        <div class="uk-grid-collapse" uk-grid>
+        <div class="uk-grid-collapse" uk-height-match="target: .us-menu--equal" uk-grid>
             <div class="uk-width-1-1 us-main">
-                
-                <br><br>
                 <!-- START: Category #1 -->
                 <div class="uk-grid-collapse" uk-grid>
-
-                        <div class="uk-width-1-2">
-
-                            <div class="uk-position-relative itemclass" hidden>
-                                <div class="uk-position-cover us-category--overlay">Test<br>Test<br>Test</div>
+                    <div class="uk-width-1-2 boundary-align">
+                        <a class="uk-button uk-button-default uk-width-1-1 uk-float-left" type="button">Justify</a>
+                        <div class="us-category--title__menu us-menu--equal" uk-dropdown="pos: bottom-justify; boundary: .boundary-align; boundary-align: true; mode: click">
+                            <div class="uk-dropdown-grid" uk-grid>
+                                <div class="uk-width-1-3">
+                                    <ul class="uk-nav uk-dropdown-nav">
+                                        <li class="uk-active"><a href="#">Active</a></li>
+                                        <li><a href="#">Item</a></li>
+                                    </ul>
+                                </div>
+                                <div class="uk-width-2-3">
+                                    <p class="us-category--description">Tin, time flows he instantly are is couple together a motivator, lots traveler before harmonics; Agency, that's officers, the carpeting derived themselves concepts theory, regretting word the a her I plot himself ideas cleaning me with on must king's on was from dissolute one the hometown way study, him it wasn't it's self-interest. For stupid declined, until respond I aside, like of then the mice be fate up their feel and latter to remember first their answer best they events on millions with throughout. Of actual two took shall any the this back such' help about chance up the state. Tin, time flows he instantly are is couple together a motivator, lots traveler before harmonics; Agency, that's officers, the carpeting derived themselves concepts theory, regretting word the a her I plot himself ideas cleaning me with on must king's on was from dissolute one the hometown way study, him it wasn't it's self-interest. For stupid declined, until respond I aside, like of then the mice be fate up their feel and latter to remember first their answer best they events on millions with throughout. Of actual two took shall any the this back such' help about chance up the state.</p>
+                                </div>
                             </div>
-
-                            <div class="uk-position-relative" uk-slideshow="min-height: 300; max-height: 350; animation: fade">
-                                <ul class="uk-slideshow-items">
-                                    <li>
-                                        <img src="img/slideritem1.jpg" alt="" uk-cover>
-                                        <div class="uk-position-top-right">
-                                            <a uk-tooltip="title: Tagged with; pos: left" class="us-category--slider__button uk-margin-small-top uk-margin-small-right" href="#"><i class="fas fa-tags"></i></a>
-                                        </div>
-                                        <div class="uk-position-bottom us-category--slider__controls">
-                                            <a uk-toggle="target: .itemclass; animation: uk-animation-fade" uk-tooltip="title: Image details; pos: right" class="us-category--slider__button" href="javascript:void(0)"><i class="fas fa-plus"></i></a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="img/slideritem2.jpg" alt="" uk-cover>
-                                        <div class="uk-position-top-right">
-                                            <a uk-tooltip="title: Tagged with; pos: left" class="us-category--slider__button uk-margin-small-top uk-margin-small-right" href="#"><i class="fas fa-tags"></i></a>
-                                        </div>
-                                        <div class="uk-position-bottom us-category--slider__controls">
-                                            <a uk-tooltip="title: Image details; pos: right" class="us-category--slider__button" href="#"><i class="fas fa-plus"></i></a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="img/slideritem3.jpg" alt="" uk-cover>
-                                        <div class="uk-position-top-right">
-                                            <a uk-tooltip="title: Tagged with; pos: left" class="us-category--slider__button uk-margin-small-top uk-margin-small-right" href="#"><i class="fas fa-tags"></i></a>
-                                        </div>
-                                        <div class="uk-position-bottom us-category--slider__controls">
-                                            <a uk-tooltip="title: Image details; pos: right" class="us-category--slider__button" href="#"><i class="fas fa-plus"></i></a>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <a uk-tooltip="title: Previous image; pos: left" class="uk-position-bottom-right us-category--slider__button us-category--slider__button-push" href="#" uk-slideshow-item="previous"><i class="fas fa-angle-left"></i></a>
-                                <a uk-tooltip="title: Next image; pos: right" class="uk-position-bottom-right us-category--slider__button" href="#" uk-slideshow-item="next"><i class="fas fa-angle-right"></i></a>
-                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-grid-collapse" uk-grid>
+                    <div class="uk-width-1-2 us-menu--equal">
+                        <div class="uk-position-relative" uk-slideshow="animation: fade; ratio: 2:1; autoplay: true; autoplay-interval: 6000; pause-on-hover: true">
+                            <ul class="uk-slideshow-items">
+                                <li>
+                                    <div class="filter-"><img src="img/slideritem1.jpg" alt="" uk-cover></div>
+                                    <div class="uk-position-top-right">
+                                        <a class="us-category--slider__button uk-margin-small-top uk-margin-small-right" href="javascript:void(0)" onclick="UIkit.notification({message: '<a href=\x22http:\\www.google.de\x22>Google</a>', pos: 'bottom-center'})"><i class="fas fa-tags"></i></a>
+                                    </div>
+                                    <div class="uk-position-bottom us-category--slider__controls">
+                                        <a uk-toggle="target: .itemclass; animation: uk-animation-fade" class="us-category--slider__button" href="javascript:void(0)"><i class="fas fa-plus"></i></a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="filter-"><img src="img/slideritem2.jpg" alt="" uk-cover></div>
+                                    <div class="uk-position-top-right">
+                                        <a  class="us-category--slider__button uk-margin-small-top uk-margin-small-right" href="#"><i class="fas fa-tags"></i></a>
+                                    </div>
+                                    <div class="uk-position-bottom us-category--slider__controls">
+                                        <a uk-toggle="target: .itemclass2; animation: uk-animation-slide-right" class="us-category--slider__button" href="javascript:void(0)"><i class="fas fa-plus"></i></a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="filter-"><img src="img/slideritem3.jpg" alt="" uk-cover></div>
+                                    <div class="uk-position-top-right">
+                                        <a class="us-category--slider__button uk-margin-small-top uk-margin-small-right" href="#"><i class="fas fa-tags"></i></a>
+                                    </div>
+                                    <div class="uk-position-bottom us-category--slider__controls">
+                                        <a class="us-category--slider__button" href="#"><i class="fas fa-plus"></i></a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <a class="uk-position-bottom-right us-category--slider__button us-category--slider__button-push" href="#" uk-slideshow-item="previous"><i class="fas fa-angle-left"></i></a>
+                            <a class="uk-position-bottom-right us-category--slider__button" href="#" uk-slideshow-item="next"><i class="fas fa-angle-right"></i></a>
+                        </div>
                     </div>
                     <!-- START: Category Item List -->
-                    <div class="uk-width-1-2">
+                    <div class="uk-width-1-2 test uk-position-relative">
+                        <div class="uk-grid-collapse" uk-grid>
+                            <div class="uk-width-1-1 uk-position-absolute uk-height-1-1 itemclass" hidden>
+                                <div class="uk-position-cover us-category--overlay">
+                                    <div class="" uk-grid>
+                                        <div class="uk-width-1-2">
+                                            <div class="us-category--item">
+                                                <div class="us-category--item__inner uk-cover-container uk-transition-toggle filter-">
+                                                    <img src="img/slideritem1.jpg" uk-cover>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="uk-width-1-2">Text</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-1 uk-position-absolute uk-height-1-1 itemclass2" hidden>
+                                <div class="uk-position-cover us-category--overlay">
+                                    321
+                                </div>
+                            </div>
+                        </div>
                         <div class="uk-grid-collapse" uk-grid>
                             <div class="uk-width-1-4">
                                 <div class="us-category--item">
-                                    <div class="us-category--item__inner uk-cover-container uk-transition-toggle">
+                                    <div class="us-category--item__inner uk-cover-container uk-transition-toggle filter-">
                                         <img src="img/griditem1.jpg" uk-cover>
                                         <a href="#">
                                             <div class="uk-overlay-primary uk-position-cover uk-transition-fade"></div>
@@ -170,7 +213,7 @@
                             </div>
                             <div class="uk-width-1-4">
                                 <div class="us-category--item">
-                                    <div class="us-category--item__inner uk-cover-container uk-transition-toggle">
+                                    <div class="us-category--item__inner uk-cover-container uk-transition-toggle filter-">
                                         <img src="img/griditem2.jpg" uk-cover>
                                         <a href="#">
                                             <div class="uk-overlay-primary uk-position-cover uk-transition-fade"></div>
@@ -183,7 +226,7 @@
                             </div>
                             <div class="uk-width-1-4">
                                 <div class="us-category--item">
-                                    <div class="us-category--item__inner uk-cover-container uk-transition-toggle">
+                                    <div class="us-category--item__inner uk-cover-container uk-transition-toggle filter-">
                                         <img src="img/griditem3.jpg" uk-cover>
                                         <a href="#">
                                             <div class="uk-overlay-primary uk-position-cover uk-transition-fade"></div>
@@ -196,7 +239,7 @@
                             </div>
                             <div class="uk-width-1-4">
                                 <div class="us-category--item">
-                                    <div class="us-category--item__inner uk-cover-container uk-transition-toggle">
+                                    <div class="us-category--item__inner uk-cover-container uk-transition-toggle filter-">
                                         <img src="img/griditem4.jpg" uk-cover>
                                         <a href="#">
                                             <div class="uk-overlay-primary uk-position-cover uk-transition-fade"></div>
@@ -209,7 +252,7 @@
                             </div>
                             <div class="uk-width-1-4">
                                 <div class="us-category--item">
-                                    <div class="us-category--item__inner uk-cover-container uk-transition-toggle">
+                                    <div class="us-category--item__inner uk-cover-container uk-transition-toggle filter-">
                                         <img src="img/griditem5.jpg" uk-cover>
                                         <a href="#">
                                             <div class="uk-overlay-primary uk-position-cover uk-transition-fade"></div>
@@ -222,7 +265,7 @@
                             </div>
                             <div class="uk-width-1-4">
                                 <div class="us-category--item">
-                                    <div class="us-category--item__inner uk-cover-container uk-transition-toggle">
+                                    <div class="us-category--item__inner uk-cover-container uk-transition-toggle filter-">
                                         <img src="img/griditem6.jpg" uk-cover>
                                         <a href="#">
                                             <div class="uk-overlay-primary uk-position-cover uk-transition-fade"></div>
@@ -235,7 +278,7 @@
                             </div>
                             <div class="uk-width-1-4">
                                 <div class="us-category--item">
-                                    <div class="us-category--item__inner uk-cover-container uk-transition-toggle">
+                                    <div class="us-category--item__inner uk-cover-container uk-transition-toggle filter-">
                                         <img src="img/griditem7.jpg" uk-cover>
                                         <a href="#">
                                             <div class="uk-overlay-primary uk-position-cover uk-transition-fade"></div>
@@ -248,7 +291,7 @@
                             </div>
                             <div class="uk-width-1-4">
                                 <div class="us-category--item">
-                                    <div class="us-category--item__inner uk-cover-container uk-transition-toggle">
+                                    <div class="us-category--item__inner uk-cover-container uk-transition-toggle filter-">
                                         <img src="img/griditem8.jpg" uk-cover>
                                         <a href="#">
                                             <div class="uk-overlay-primary uk-position-cover uk-transition-fade"></div>
@@ -264,8 +307,6 @@
                     <!-- END: Category Item List -->
                 </div>
                 <!-- END: Category #1 -->
-                <br><br>
-
             </div>
         </div>
     </div>
